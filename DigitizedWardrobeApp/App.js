@@ -10,14 +10,31 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  AppRegistry,
+  Image,
 } from 'react-native';
 
+
+const remote = 'https://s14.postimg.org/poli1vmkx/Tux.jpg'
 
 type Props = {};
 export default class App extends Component<Props> {
   render() {
-    return React.createElement(Text, {style: styles.description},"What kind of style are you feeling today?");
+//    return React.createElement(Text, {style: styles.description},"What kind of style are you feeling today?");
+    
+    const resizeMode = 'contain';
+
+    return (
+      <Image
+        style={{
+          flex: 1,
+          resizeMode,
+        }}
+        source={{ uri: remote }}
+      />
+    );
+    
   }
 }
 
