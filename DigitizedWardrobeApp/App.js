@@ -1,49 +1,14 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-'use strict';
+import React from 'react';
+import { TabNavigator } from 'react-navigation';
 
-import React, { Component } from 'react';
-import {
-  Platform,
-  StyleSheet,
-  Text,
-  View,
-  AppRegistry,
-  Image,
-} from 'react-native';
+import CalendarScreen from './app/screens/calendar';
+import ShoppingScreen from './app/screens/shopping';
+import SocialScreen from './app/screens/social';
+import WardrobeScreen from './app/screens/wardrobe';
 
-
-const remote = 'https://s14.postimg.org/poli1vmkx/Tux.jpg'
-
-type Props = {};
-export default class App extends Component<Props> {
-  render() {
-//    return React.createElement(Text, {style: styles.description},"What kind of style are you feeling today?");
-    
-    const resizeMode = 'contain';
-
-    return (
-      <Image
-        style={{
-          flex: 1,
-          resizeMode,
-        }}
-        source={{ uri: remote }}
-      />
-    );
-    
-  }
-}
-
-const styles = StyleSheet.create({
-    description:{
-        fontSize: 24,
-        textAlign: 'center',
-        color: '#656565',
-        marginTop: 65,
-    },
-
+export default TabNavigator ({
+  Calendar: CalendarScreen,
+  Shopping: ShoppingScreen,
+  Social: SocialScreen,
+  Wardrobe: WardrobeScreen,
 });
