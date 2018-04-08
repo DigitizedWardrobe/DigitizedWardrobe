@@ -92,11 +92,11 @@ class CalendarScreen extends Component {
           }}
           // agenda theme
           theme={{    
-              ...calendarTheme,
+/*              ...calendarTheme,
               agendaDayTextColor: 'yellow',
               agendaDayNumColor: 'green',
               agendaTodayColor: 'red',
-              agendaKnobColor: 'blue'}}
+              agendaKnobColor: 'blue'*/}}
           // agenda container style
           style={{}}
         />
