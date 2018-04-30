@@ -4,9 +4,12 @@ import { Calendar, CalendarList, Agenda } from 'react-native-calendars';
 
 class CalendarScreen extends Component {
   render() {
+
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
         <Text>Calendar!</Text>
+        
+
         <Calendar
           // Initially visible month. Default = Date()
           current={'2012-03-01'}
@@ -42,6 +45,8 @@ class CalendarScreen extends Component {
           // Handler which gets executed when press arrow icon left. It receive a callback can go next month
           onPressArrowRight={addMonth => addMonth()}
         /> 
+
+        
         <Agenda
           // the list of items that have to be displayed in agenda. If you want to render item as empty date
           // the value of date key kas to be an empty array []. If there exists no value for date key it is
@@ -83,21 +88,14 @@ class CalendarScreen extends Component {
           // specify your item comparison function for increased performance
           rowHasChanged={(r1, r2) => {return r1.text !== r2.text}}
           // Hide knob button. Default = false
-          hideKnob={true}
+          //hideKnob={true}
           // By default, agenda dates are marked if they have at least one item, but you can override this if needed
           markedDates={{
             '2012-05-16': {selected: true, marked: true},
             '2012-05-17': {marked: true},
-            '2012-05-18': {disabled: true}
           }}
           // agenda theme
-          theme={{    
-/*              ...calendarTheme,
-              agendaDayTextColor: 'yellow',
-              agendaDayNumColor: 'green',
-              agendaTodayColor: 'red',
-              agendaKnobColor: 'blue'*/}}
-          // agenda container style
+         // agenda container style
           style={{}}
         />
       </View>
